@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "rules": [
+    {"id":"RULE-001","category":"Flow Design","description":"增加翅片高度前，必须同时评估系统压降和风扇工作点。","supportingCases":["CASE-001"]},
+    {"id":"RULE-002","category":"Validation","description":"残差收敛后仍需检查温度、流量、压降和热流路径。","supportingCases":["CASE-003"]},
+    {"id":"RULE-003","category":"Model Setup","description":"仿真与测试不一致时，优先检查功耗、边界和风扇工作点。","supportingCases":["CASE-002"]}
+  ]
+}

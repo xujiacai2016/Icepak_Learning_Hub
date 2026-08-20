@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "cases": [
+    {"id":"CASE-001","product":"EDFA","title":"Heat Sink Optimization","category":"Thermal Design","difficulty":"Intermediate","problem":"Module temperature exceeds the requirement.","rootCause":"Thermal resistance and airflow bottleneck must be separated.","solution":"Evaluate TIM, contact resistance, fin pitch and fan working point together.","lesson":"Increasing heat sink area alone does not guarantee a lower temperature."},
+    {"id":"CASE-002","product":"Line Card","title":"Fan Selection","category":"Flow Design","difficulty":"Intermediate","problem":"Measured airflow is lower than the datasheet free-air flow.","rootCause":"The system operating point is limited by pressure drop.","solution":"Use the fan P-Q curve with the system impedance curve.","lesson":"Always evaluate the actual fan working point."},
+    {"id":"CASE-003","product":"PCB","title":"Mesh Independence Study","category":"Validation","difficulty":"Advanced","problem":"Temperature changes after local refinement.","rootCause":"The result is not mesh independent.","solution":"Refine hotspot regions and compare engineering outputs across mesh levels.","lesson":"Mesh independence supports result credibility."}
+  ]
+}

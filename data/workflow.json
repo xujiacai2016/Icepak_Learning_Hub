@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "steps": [
+    {"id":"geometry","name":"Geometry","what":"定义热流和空气流动的物理空间。","why":"所有热传导、对流和辐射都依赖几何结构。","input":["STEP","Parasolid","IDF","PCB Model"],"output":"Computational Domain","impact":["导热路径","气流路径","热阻网络","压降分布"],"commonMistakes":["建模过于复杂，导致网格数量过大","忽略关键热路径"]},
+    {"id":"material","name":"Material","what":"定义模型中各区域的热物性。","why":"材料属性决定热量如何在系统内部传递。","input":["Thermal Conductivity","Density","Specific Heat","Emissivity"],"output":"Material Properties","impact":["温度梯度","热阻","瞬态响应"],"commonMistakes":["导热率单位错误","使用默认材料而未核对真实物性"]},
+    {"id":"power","name":"Power","what":"定义器件和区域的热量产生。","why":"功耗是温升和热设计问题的根源。","input":["Constant Power","Power Density","Transient Power"],"output":"Heat Generation","impact":["温升","热点","可靠性"],"commonMistakes":["忽略效率损失","功率分布与真实位置不一致"]},
+    {"id":"boundary","name":"Boundary","what":"定义系统与外部环境的交换条件。","why":"边界决定热量和流体如何离开系统。","input":["Opening","Pressure Boundary","Velocity Boundary","Ambient"],"output":"Flow and Thermal Boundary","impact":["Airflow","Pressure Field","Temperature Distribution"],"commonMistakes":["入口出口反向","环境温度设置错误"]},
+    {"id":"flow","name":"Flow","what":"定义空气的流动路径和冷却能力。","why":"风扇、开口和阻塞共同决定实际空气流量。","input":["Fan","Blower","Grille","Opening"],"output":"Airflow Field","impact":["Velocity","Convection","Temperature"],"commonMistakes":["使用自由风量而非实际工作点风量","风扇方向错误"]},
+    {"id":"thermal","name":"Thermal","what":"定义从热源到环境的散热路径。","why":"热阻网络决定热量传递过程中的温度梯度。","input":["Thermal Resistance","Heat Sink","Heat Pipe","TIM","Radiation"],"output":"Thermal Path","impact":["Heat Flow","Temperature","Heat Flux"],"commonMistakes":["忽略 TIM 和接触热阻","未评估散热器带来的压降"]},
+    {"id":"mesh","name":"Mesh","what":"将连续计算域离散为可求解的单元。","why":"网格决定热点、梯度和流动细节能否被解析。","input":["Global Mesh","Local Refinement","Mesh Independence"],"output":"Discrete Domain","impact":["Accuracy","Convergence","Runtime"],"commonMistakes":["网格过粗","局部加密过度"]},
+    {"id":"solver","name":"Solver","what":"求解质量、动量和能量守恒方程。","why":"求解器把模型输入转换为可分析的物理结果。","input":["Mesh","Boundary","Material","Power"],"output":"Converged Solution","impact":["Residual","Physical Results","Iteration Time"],"commonMistakes":["只看 Residual，不看物理结果","收敛标准设置不合理"]},
+    {"id":"post","name":"Post Processing","what":"提取温度、流量、压降等工程结果。","why":"后处理将计算结果转化为设计判断的证据。","input":["Temperature","Velocity","Pressure","Flow Rate","Heat Flux"],"output":"Engineering Evidence","impact":["Design Review","Validation","Optimization"],"commonMistakes":["只查看最高温度","忽略流场和压降"]},
+    {"id":"decision","name":"Design Decision","what":"基于结果判断设计是否满足工程约束。","why":"仿真的最终价值是支持可靠、可制造的设计决策。","input":["Thermal Results","Flow Results","Reliability Target","Cost Constraint"],"output":"Design Direction","impact":["Temperature Margin","Reliability","Manufacturability"],"commonMistakes":["只追求温度最低而忽略成本、重量和制造可行性"]}
+  ]
+}

@@ -1,0 +1,16 @@
+:root {
+  --ink: #17252b;
+  --muted: #65747a;
+  --paper: #f4f1eb;
+  --surface: #fffdf8;
+  --line: #d9ddd7;
+  --cyan: #1f9eaa;
+  --orange: #e87b3f;
+  --green: #4f8f68;
+  --yellow: #dcae35;
+  --red: #c95343;
+  --blue: #4777a7;
+  --shadow: 0 18px 50px rgba(23, 37, 43, .08);
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+}

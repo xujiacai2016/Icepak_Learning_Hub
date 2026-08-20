@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Check | Icepak Learning Hub</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/health-check.css">
+</head>
+<body data-page="health-check">
+  <header class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-mark">IH</span><span>Icepak Learning Hub</span></a>
+    <nav class="topnav" aria-label="Primary navigation">
+      <a href="workflow.html">Workflow</a><a href="logic-tree.html">Logic Tree</a><a href="troubleshooting.html">Troubleshooting</a><a href="quiz.html">Quiz</a><a href="case-library.html">Case Library</a><a href="glossary.html">Glossary</a><a href="health-check.html">Health Check</a>
+    </nav>
+  </header>
+  <main class="shell health-shell">
+    <section class="health-hero">
+      <div>
+        <p class="eyebrow">SYSTEM VERIFICATION · V1.0</p>
+        <h1>Health Check</h1>
+        <p>自动检查页面、数据文件和关键字段，快速确认静态原型是否可运行。</p>
+      </div>
+      <div class="overall-status is-loading" data-overall-status aria-live="polite"><span class="status-dot"></span><strong>Checking...</strong><small>正在检查项目资源</small></div>
+    </section>
+    <section class="health-summary" data-summary aria-label="Health check summary"></section>
+    <section class="check-section"><div class="section-heading"><div><p class="eyebrow">01 / PAGES</p><h2>Pages</h2></div><span class="section-note">Static HTML entry points</span></div><div class="check-grid" data-pages-results></div></section>
+    <section class="check-section"><div class="section-heading"><div><p class="eyebrow">02 / DATA</p><h2>JSON Resources</h2></div><span class="section-note">Fetch and parse checks</span></div><div class="check-grid" data-data-results></div></section>
+    <section class="check-section"><div class="section-heading"><div><p class="eyebrow">03 / SCHEMA</p><h2>Key Fields</h2></div><span class="section-note">Minimum content contract</span></div><div class="check-grid" data-schema-results></div></section>
+    <p class="health-error" data-health-error hidden></p>
+  </main>
+  <script type="module" src="../js/health-check.js"></script>
+</body>
+</html>

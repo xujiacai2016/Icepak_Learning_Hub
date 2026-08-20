@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Glossary | Icepak Learning Hub</title>
+	<link rel="stylesheet" href="../css/variables.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/navigation.css">
+	<link rel="stylesheet" href="../css/glossary.css">
+</head>
+<body data-page="glossary">
+	<header class="topbar">
+		<a class="brand" href="dashboard.html"><span class="brand-mark">IH</span><span>Icepak Learning Hub</span></a>
+		<nav class="topnav" aria-label="Primary navigation"><a href="workflow.html">Workflow</a><a href="logic-tree.html">Logic Tree</a><a href="troubleshooting.html">Troubleshooting</a><a href="quiz.html">Quiz</a><a href="case-library.html">Case Library</a><a href="glossary.html">Glossary</a></nav>
+	</header>
+	<main class="shell glossary-shell">
+		<section class="page-intro glossary-intro">
+			<p class="eyebrow">03 / SHARED LANGUAGE</p>
+			<h1>Glossary</h1>
+			<p>建立 Icepak 统一术语体系，理解定义、物理意义和工程意义。</p>
+			<label class="glossary-search" for="term-search"><span>Search terms</span><input id="term-search" type="search" placeholder="Search English or 中文..." data-term-search></label>
+		</section>
+		<section class="glossary-layout" aria-label="Glossary three-column layout">
+			<aside class="domain-panel" aria-label="Domain categories"><p class="eyebrow">DOMAIN CATEGORY</p><div class="domain-list" data-domain-list></div></aside>
+			<section class="term-panel" aria-label="Term list"><div class="panel-heading"><p class="eyebrow">TERM LIST</p><span data-term-count>Loading...</span></div><div class="term-list" data-term-list></div></section>
+			<aside class="term-detail" data-term-detail aria-live="polite"><p class="eyebrow">TERM DETAIL</p><p class="detail-loading">正在读取 glossary.json...</p></aside>
+		</section>
+	</main>
+	<script type="module" src="../js/glossary.js"></script>
+</body>
+</html>

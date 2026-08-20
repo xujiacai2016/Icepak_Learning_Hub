@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "issues": [
+    {"id":"temperature-high","category":"Temperature","title":"Temperature too high","symptoms":["器件超规格","热点明显","结果远高于预期"],"checkPath":["Power","Material","TIM / Contact Resistance","Fan and Flow Direction","Heat Sink","Boundary","Mesh"],"commonFix":["修正功耗","优化热路径","改善风道","降低热阻"]},
+    {"id":"airflow-low","category":"Flow","title":"Airflow too low","symptoms":["实际风量低于预期","局部冷却不足"],"checkPath":["P-Q Curve","RPM","Direction","Obstruction","Inlet and Outlet Clearance"],"commonFix":["核对实际工作点","检查风扇方向","清理流道阻塞"]},
+    {"id":"pressure-high","category":"Pressure","title":"Pressure drop too high","symptoms":["系统阻抗高","风量下降","温度上升"],"checkPath":["Fin Pitch","Grille Resistance","Flow Path","Cable or Structure Obstruction"],"commonFix":["放宽风道","优化翅片间距","降低格栅阻力"]},
+    {"id":"mesh-change","category":"Mesh","title":"Temperature changes after refinement","symptoms":["加密网格后温度变化明显"],"checkPath":["Local Refinement","Mesh Independence Study","Hotspot Resolution"],"commonFix":["执行网格独立性研究","只在关键区域局部加密"]},
+    {"id":"not-converged","category":"Solver","title":"Not converged","symptoms":["残差振荡","迭代结果不稳定"],"checkPath":["Mesh","Boundary","Fan","Material","Solver Settings"],"commonFix":["改善网格","检查边界和风扇","调整松弛因子"]}
+  ]
+}

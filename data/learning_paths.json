@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "paths": [
+    {"id":"beginner","name":"Beginner","description":"建立 Icepak 基本仿真流程认知。","sequence":["workflow","glossary","quiz"]},
+    {"id":"intermediate","name":"Intermediate","description":"理解各设置之间的热和流体因果关系。","sequence":["workflow","logic-tree","glossary","quiz"]},
+    {"id":"advanced","name":"Advanced","description":"通过诊断树排查常见仿真异常。","sequence":["logic-tree","troubleshooting","case-library","quiz"]}
+  ]
+}

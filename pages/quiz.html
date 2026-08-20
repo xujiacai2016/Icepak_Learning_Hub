@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz | Icepak Learning Hub</title>
+	<link rel="stylesheet" href="../css/variables.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/navigation.css">
+	<link rel="stylesheet" href="../css/cards.css">
+	<link rel="stylesheet" href="../css/quiz.css">
+</head>
+<body data-page="quiz">
+	<header class="topbar"><a class="brand" href="dashboard.html"><span class="brand-mark">IH</span><span>Icepak Learning Hub</span></a><nav class="topnav" aria-label="Primary navigation"><a href="workflow.html">Workflow</a><a href="logic-tree.html">Logic Tree</a><a href="troubleshooting.html">Troubleshooting</a><a href="quiz.html">Quiz</a><a href="case-library.html">Case Library</a><a href="glossary.html">Glossary</a></nav></header>
+	<main class="shell quiz-page">
+		<section class="page-intro"><p class="eyebrow">05 / PRACTICE</p><h1>Quiz</h1><p>Validate your Icepak understanding through concept, logic and troubleshooting questions.</p></section>
+		<section class="quiz-layout" aria-label="Quiz practice">
+			<aside class="quiz-sidebar"><div class="quiz-panel"><p class="eyebrow">LEVEL</p><div class="filter-list" data-level-filter></div></div><div class="quiz-panel"><p class="eyebrow">DOMAIN</p><select class="quiz-select" data-domain-filter aria-label="Filter by domain"><option value="all">All domains</option></select></div><div class="quiz-score" aria-live="polite"><span>Questions</span><strong data-question-count>0 / 0</strong><span>Score</span><strong data-score>0 / 0</strong></div></aside>
+			<article class="question-card quiz-panel" data-quiz-card><div class="quiz-loading" data-quiz-loading>Loading quiz questions...</div><div data-question-content hidden><div class="question-meta"><span class="eyebrow" data-question-id></span><span class="type-badge" data-question-type></span></div><h2 data-question></h2><div class="answers" data-options role="radiogroup" aria-label="Answer options"></div><div class="quiz-actions"><button class="button button-primary" type="button" data-submit disabled>Submit</button><button class="button" type="button" data-next disabled>Next Question</button></div><div class="quiz-feedback" data-feedback aria-live="polite"></div></div><p class="empty-state" data-empty hidden>No questions match the selected Level and Domain.</p><p class="quiz-error" data-error hidden></p></article>
+			<aside class="quiz-panel related-panel"><p class="eyebrow">REVIEW</p><div class="review-status" data-review-status>Submit an answer to review this question.</div><dl class="related-list"><div><dt>Related Domain</dt><dd data-related-domain>—</dd></div><div><dt>Related Glossary</dt><dd data-related-glossary>—</dd></div><div><dt>Related Workflow Node</dt><dd data-related-workflow>—</dd></div></dl></aside>
+		</section>
+	</main>
+	<script type="module" src="../js/quiz.js"></script>
+</body>
+</html>

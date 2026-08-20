@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "nodes": [
+    {"id":"fan-airflow","domain":"Flow","name":"Fan → Airflow → Velocity → HTC → Temperature","cause":"Fan working point","mechanism":"Air velocity changes convection","effect":"Temperature may decrease","commonMistakes":["把自由风量当作实际工作点"]},
+    {"id":"pressure-airflow","domain":"Flow","name":"Pressure Drop ↑ → Airflow ↓ → Temperature ↑","cause":"System impedance","mechanism":"Pressure loss limits the fan operating point","effect":"Cooling capability decreases","commonMistakes":["只增加翅片面积而不检查压降"]},
+    {"id":"resistance-temperature","domain":"Thermal","name":"Thermal Resistance ↓ → Temperature Rise ↓","cause":"Material, TIM, contact path","mechanism":"Lower resistance improves heat spreading","effect":"Lower component temperature","commonMistakes":["只关注散热器，忽略接触热阻"]},
+    {"id":"mesh-accuracy","domain":"Mesh","name":"Fine Mesh → Accuracy ↑ / Runtime ↑","cause":"Local discretization","mechanism":"Small cells resolve gradients more clearly","effect":"Higher accuracy at higher cost","commonMistakes":["未经网格独立性研究就下结论"]},
+    {"id":"solver-convergence","domain":"Solver","name":"Residual ↓ ≠ Result Correct","cause":"Equation convergence","mechanism":"Residual measures numerical error, not model validity","effect":"Need physical result checks","commonMistakes":["只看 Residual"]}
+  ]
+}

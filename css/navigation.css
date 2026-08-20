@@ -1,0 +1,8 @@
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 74px; padding: 0 32px; border-bottom: 1px solid var(--line); background: rgba(255, 253, 248, .88); }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.02em; white-space: nowrap; }
+.brand-mark { display: grid; width: 30px; height: 30px; place-items: center; color: var(--surface); background: var(--orange); font-size: .7rem; }
+.topnav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; color: var(--muted); font-size: .78rem; font-weight: 700; }
+.topnav a { padding: 8px 0; border-bottom: 2px solid transparent; }
+.topnav a:hover, body[data-page="dashboard"] .topnav a[href="dashboard.html"], body[data-page="workflow"] .topnav a[href="workflow.html"], body[data-page="logic-tree"] .topnav a[href="logic-tree.html"], body[data-page="troubleshooting"] .topnav a[href="troubleshooting.html"], body[data-page="quiz"] .topnav a[href="quiz.html"], body[data-page="case-library"] .topnav a[href="case-library.html"], body[data-page="glossary"] .topnav a[href="glossary.html"] { color: var(--ink); border-bottom-color: var(--orange); }
+body[data-page="health-check"] .topnav a[href="health-check.html"] { color: var(--ink); border-bottom-color: var(--orange); }
+@media (max-width: 900px) { .topbar { align-items: flex-start; flex-direction: column; padding: 18px 20px; } .topnav { justify-content: flex-start; gap: 12px 18px; } }

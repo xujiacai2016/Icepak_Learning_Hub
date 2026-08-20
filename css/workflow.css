@@ -1,0 +1,19 @@
+.workspace-grid { display: grid; grid-template-columns: 190px minmax(280px, 1fr) 300px; gap: 18px; padding-top: 34px; }
+.step-list, .filter-panel, .issue-menu { display: grid; align-content: start; gap: 5px; }
+.step-item, .filter-button, .issue-button { padding: 12px 14px; border: 0; border-left: 3px solid transparent; color: var(--muted); background: transparent; text-align: left; cursor: pointer; }
+.step-item span { display: inline-block; width: 28px; color: var(--orange); font-size: .7rem; font-weight: 800; }
+.step-item:hover, .step-item.is-active, .filter-button:hover, .filter-button.is-active, .issue-button:hover, .issue-button.is-active { border-left-color: var(--orange); color: var(--ink); background: var(--surface); }
+.workflow-canvas { min-height: 590px; padding: 26px; border: 1px solid var(--line); background: #e8ece5; }
+.workflow-chain { display: grid; place-items: center; gap: 9px; color: var(--ink); font-weight: 800; text-align: center; }
+.workflow-node { width: min(100%, 190px); padding: 8px 12px; border: 1px solid var(--ink); color: var(--ink); background: var(--surface); font-weight: 800; cursor: pointer; }
+.workflow-node:hover, .workflow-node.is-active { border-color: var(--orange); background: #fff3e9; }
+.workflow-chain i, .connector { color: var(--orange); font-style: normal; }
+.detail-panel, .logic-node, .issue-detail, .question-card { padding: 26px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
+.detail-panel h2, .issue-detail h2 { margin-bottom: 12px; font-size: 2.4rem; }
+.detail-lead { color: var(--muted); font-size: 1.05rem; }
+dl { margin: 28px 0; } dt { margin-top: 16px; color: var(--cyan); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; } dd { margin: 2px 0 0; } .workflow-details dd { color: var(--ink); } .workflow-details ul { margin: 4px 0 0; padding-left: 18px; } .workflow-details li + li { margin-top: 4px; }
+.logic-layout, .issue-layout { display: grid; grid-template-columns: 180px 1fr; gap: 26px; padding-top: 34px; }
+.logic-tree { display: grid; gap: 18px; } .logic-node { box-shadow: none; } .logic-node.root { border-top: 4px solid var(--orange); } .node-type { color: var(--cyan); font-size: .7rem; font-weight: 800; letter-spacing: .12em; } .logic-node h2, .logic-node h3 { margin: 10px 0; } .logic-node h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; } .logic-node p { margin-bottom: 0; color: var(--muted); }
+.tree-branch { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.issue-layout { grid-template-columns: 220px 1fr; } .issue-detail { min-height: 400px; } .check-path { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 34px 0; } .check-path span { padding: 8px 12px; border: 1px solid var(--line); background: #eef4ee; font-size: .85rem; } .check-path i { color: var(--orange); font-style: normal; } .fix-box { padding: 18px; border-left: 4px solid var(--orange); background: #fff3e9; } .fix-box p { margin: 4px 0 0; }
+@media (max-width: 980px) { .workspace-grid { grid-template-columns: 170px 1fr; } .detail-panel { grid-column: 1 / -1; } } @media (max-width: 700px) { .workspace-grid, .logic-layout, .issue-layout { grid-template-columns: 1fr; } .tree-branch { grid-template-columns: 1fr; } }

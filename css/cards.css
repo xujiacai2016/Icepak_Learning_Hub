@@ -1,0 +1,11 @@
+.card-grid, .term-grid, .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feature-card, .term-card, .case-card { display: flex; min-height: 220px; flex-direction: column; padding: 25px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+.feature-card:hover, .term-card:hover, .case-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(23, 37, 43, .13); }
+.feature-card h3, .term-card h3, .case-card h3 { margin: 18px 0 10px; font-family: var(--font-display); font-size: 1.7rem; font-weight: 400; }
+.feature-card p, .term-card p, .case-card p { color: var(--muted); }
+.card-index { color: var(--orange); font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+.card-link { margin-top: auto; font-size: .85rem; }
+.accent-cyan { border-top: 4px solid var(--cyan); } .accent-orange { border-top: 4px solid var(--orange); } .accent-green { border-top: 4px solid var(--green); } .accent-yellow { border-top: 4px solid var(--yellow); } .accent-red { border-top: 4px solid var(--red); } .accent-blue { border-top: 4px solid var(--blue); }
+.term-card { min-height: 190px; } .term-card small, .case-card small { color: var(--cyan); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.case-card { min-height: 240px; } .case-meta { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: .78rem; }
+@media (max-width: 900px) { .card-grid, .term-grid, .case-grid { grid-template-columns: repeat(2, 1fr); } } @media (max-width: 560px) { .card-grid, .term-grid, .case-grid { grid-template-columns: 1fr; } }
