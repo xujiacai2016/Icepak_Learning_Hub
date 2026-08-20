@@ -1,0 +1,139 @@
+{
+  "schema_version": "2.0",
+  "entity_type": "icepak_option",
+  "generated_from": [
+    "data/glossary.json",
+    "data/workflow.json",
+    "data/design_rules.json",
+    "data/cases.json"
+  ],
+  "options": [
+    {
+      "id": "OPT-001",
+      "name": "Mesh Type",
+      "category": "Meshing",
+      "description": "Computational mesh generation method",
+      "difficulty": "",
+      "tags": [],
+      "available_values": [],
+      "recommended_values": [],
+      "related_options": [],
+      "workflow_refs": [],
+      "case_refs": [],
+      "design_rule_refs": [],
+      "troubleshooting_refs": [],
+      "guide_references": [],
+      "images": [],
+      "source_refs": [
+        {
+          "file": "data/glossary.json",
+          "field_path": "terms[13]",
+          "source_id": "mesh"
+        }
+      ],
+      "content_status": "draft"
+    },
+    {
+      "id": "OPT-002",
+      "name": "Fin Pitch",
+      "category": "Heat Sink",
+      "description": "相邻散热片之间的距离",
+      "difficulty": "",
+      "tags": [],
+      "available_values": [],
+      "recommended_values": [],
+      "related_options": [],
+      "workflow_refs": [],
+      "case_refs": ["CASE-001"],
+      "design_rule_refs": [],
+      "troubleshooting_refs": [],
+      "guide_references": [],
+      "images": [],
+      "source_refs": [
+        {
+          "file": "data/glossary.json",
+          "field_path": "terms[12]",
+          "source_id": "fin-pitch"
+        },
+        {
+          "file": "data/cases.json",
+          "field_path": "cases[0].solution"
+        }
+      ],
+      "content_status": "draft"
+    },
+    {
+      "id": "OPT-003",
+      "name": "Flow Velocity",
+      "category": "Boundary",
+      "description": "",
+      "difficulty": "",
+      "tags": [],
+      "available_values": [],
+      "recommended_values": [],
+      "related_options": [],
+      "workflow_refs": ["flow"],
+      "case_refs": [],
+      "design_rule_refs": [],
+      "troubleshooting_refs": [],
+      "guide_references": [],
+      "images": [],
+      "source_refs": [
+        {
+          "file": "data/workflow.json",
+          "field_path": "steps[4].input[1]"
+        }
+      ],
+      "content_status": "draft"
+    },
+    {
+      "id": "OPT-004",
+      "name": "Radiation Model",
+      "category": "Radiation",
+      "description": "",
+      "difficulty": "",
+      "tags": [],
+      "available_values": [],
+      "recommended_values": [],
+      "related_options": [],
+      "workflow_refs": [],
+      "case_refs": [],
+      "design_rule_refs": ["RULE-001"],
+      "troubleshooting_refs": [],
+      "guide_references": [],
+      "images": [],
+      "source_refs": [
+        {
+          "file": "data/design_rules.json",
+          "field_path": "rules[0]"
+        }
+      ],
+      "content_status": "draft"
+    },
+    {
+      "id": "OPT-005",
+      "name": "Thermal Conductivity",
+      "category": "Materials",
+      "description": "材料传递热量的能力",
+      "difficulty": "",
+      "tags": [],
+      "available_values": [],
+      "recommended_values": [],
+      "related_options": [],
+      "workflow_refs": ["material"],
+      "case_refs": [],
+      "design_rule_refs": [],
+      "troubleshooting_refs": [],
+      "guide_references": [],
+      "images": [],
+      "source_refs": [
+        {
+          "file": "data/glossary.json",
+          "field_path": "terms[6]",
+          "source_id": "thermal-conductivity"
+        }
+      ],
+      "content_status": "draft"
+    }
+  ]
+}
