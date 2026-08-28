@@ -1,1 +1,3 @@
 我想开发一个网页，用于熟悉和练习icepak的设置与操作，包括各功能背后的逻辑关系。
+
+Icepak Learning Hub 是一个基于 Ansys Icepak User Guide、软件操作知识和工程经验知识构建的学习与导航平台，通过 Chapter、Figure、Concept、Object、Attribute、Workflow、Function Tree 和 Relationship Graph 等模块，帮助工程师快速理解 Icepak 软件的功能体系、操作流程和知识关联，服务于培训学习、知识管理与工程实践。

@@ -32,6 +32,71 @@ function addResult(group, label, status, message) {
   elements[group].insertAdjacentHTML('beforeend', `<article class="check-card is-${status}"><div><span class="check-status">${status}</span><h3>${label}</h3><p>${message}</p></div></article>`);
 }
 
+// 添加节流控制：限制并发数和请求频率
+const requestThrottler = {
+  lastRequestTime: 0,
+  minInterval: 200, // 最小200ms间隔
+  maxConcurrent: 2, // 最大并发数限制为2
+  
+  // 请求节流函数
+  throttle: function(callback) {
+    const now = Date.now();
+    if (now - this.lastRequestTime >= this.minInterval) {
+      this.lastRequestTime = now;
+      return callback();
+    } else {
+      // 如果距离上次请求太近，则延迟执行
+      const delay = this.minInterval - (now - this.lastRequestTime);
+      return new Promise(resolve => {
+        setTimeout(() => {
+          this.lastRequestTime = Date.now();
+          resolve(callback());
+        }, delay);
+      });
+    }
+  },
+  
+  // 并发控制函数，避免一次性并发过多请求
+  withConcurrencyLimit: async function(callback) {
+    // 为每个异步操作创建一个带延迟的包装器
+    return new Promise((resolve, reject) => {
+      // 尝试获取并发许可
+      let attempts = 0;
+      const maxAttempts = 10;
+      
+      const attempt = () => {
+        if (attempts >= maxAttempts) {
+          reject(new Error('Max concurrent request attempts reached'));
+          return;
+        }
+        
+        const now = Date.now();
+        if (now - this.lastRequestTime >= this.minInterval) {
+          // 获得并发许可并执行
+          this.lastRequestTime = now;
+          try {
+            const result = callback();
+            if (result instanceof Promise) {
+              result.then(resolve).catch(reject);
+            } else {
+              resolve(result);
+            }
+          } catch (error) {
+            reject(error);
+          }
+        } else {
+          // 没有获得许可，稍后重试
+          attempts++;
+          setTimeout(attempt, 50);
+        }
+      };
+      
+      attempt();
+    });
+  }
+};
+
+async function runHealthCheck() {
 async function checkResource(path) {
   try {
     const response = await fetch(`../${path}`, { cache: 'no-store' });

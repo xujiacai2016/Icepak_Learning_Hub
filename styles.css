@@ -1,0 +1,189 @@
+/* Icepak学习平台样式 */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f5f5f5;
+}
+
+header { 
+    background: #2c3e50; 
+    color: white; 
+    padding: 1rem; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 1rem; 
+    margin: 0;
+    padding: 0;
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+nav a.active {
+    background-color: #3498db;
+}
+
+main { 
+    padding: 2rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+section.active {
+    display: block;
+}
+
+/* 仪表板样式 */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* 设置模块样式 */
+.setup-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input[type="range"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 流体模块样式 */
+.fluid-controls {
+    max-width: 600px;
+}
+
+/* 材料库样式 */
+.materials-search {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.materials-search input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.materials-search button {
+    padding: 0.5rem 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.materials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.material-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+/* 逻辑关系样式 */
+.logic-diagram {
+    max-width: 800px;
+}
+
+.logic-diagram ul, .logic-diagram ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.arrow {
+    color: #3498db;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .materials-search {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        padding: 0.5rem;
+    }
+}

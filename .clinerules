@@ -1,0 +1,43 @@
+# Icepak Learning Hub Project Governance Rules - V2.0
+
+## 1. Documentation First
+所有代码变更和架构决策必须首先通过文档记录。
+- 所有新功能必须伴随着设计文档
+- 代码变更必须在相应的设计文档中被引用
+- 重要技术决策需记录在 .clinerules 或 ADR 中
+
+## 2. Knowledge Preservation
+所有设计知识、决策和经验都必须保存和可检索。
+- 基于 Markdown 的文档结构
+- 遵循标准的文档模板
+- 确保知识的上下文可解释性
+
+## 3. Session Recovery
+确保开发环境和项目状态的可恢复性。
+- 所有开发变更将被记录在文档中
+- 使用统一的文件命名规范和结构
+- 支持通过文档恢复到任意历史状态
+
+## 4. Development Log
+每次重要开发活动需在开发日志中记录。
+- 记录每次变更和决策的原因
+- 包括变更影响和后续跟踪
+- 支持追溯性
+
+## 5. Governance Compliance Check
+项目开发必须遵循治理合规性检查。
+- 代码和文档变更需审查
+- 知识资产完整性和一致性检查
+- 基线文档和知识树的更新检查
+
+## 6. Single Source of Truth
+项目所有关键知识只从单一可信源获取。
+- 文档存储在 docs/ 目录下
+- 数据资产统一存储于 data/ 目录
+- 所有资源都应可被正确引用
+
+## 7. Token Optimization
+优化项目资源调用（token 优化）。
+- 避免不必要的重复处理
+- 优化 JSON 数据加载和解析
+- 减少 HTML 和 CSS 重复定义
