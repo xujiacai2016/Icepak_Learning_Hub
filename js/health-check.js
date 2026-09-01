@@ -96,7 +96,6 @@ const requestThrottler = {
   }
 };
 
-async function runHealthCheck() {
 async function checkResource(path) {
   try {
     const response = await fetch(`../${path}`, { cache: 'no-store' });
