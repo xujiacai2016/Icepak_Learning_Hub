@@ -6,7 +6,15 @@ const list = document.querySelector('[data-workflow-list]');
 const chain = document.querySelector('[data-workflow-chain]');
 
 function renderStep(step) {
-  detail.innerHTML = `<p class="eyebrow">SELECTED STEP</p><h2>${step.name}</h2><dl class="workflow-details"><dt>What</dt><dd>${step.what}</dd><dt>Why</dt><dd>${step.why}</dd><dt>Input</dt><dd>${step.input.join(', ')}</dd><dt>Output</dt><dd>${step.output}</dd><dt>Impact</dt><dd>${step.impact.join('、')}</dd><dt>Common Mistakes</dt><dd><ul>${step.commonMistakes.map((mistake) => `<li>${mistake}</li>`).join('')}</ul></dd></dl>`;
+  let icepakContent = '';
+  if (step.icepak_operations) {
+    icepakContent = `<dt>Icepak 操作</dt><dd><ul>${step.icepak_operations.map(op => `<li>${op}</li>`).join('')}</ul></dd>`;
+  }
+  let screenshotContent = '';
+  if (step.screenshot) {
+    screenshotContent = `<dt>操作截图</dt><dd><img src="${step.screenshot}" alt="操作截图" style="max-width: 100%; height: auto;"></dd>`;
+  }
+  detail.innerHTML = `<p class="eyebrow">SELECTED STEP</p><h2>${step.name}</h2><dl class="workflow-details"><dt>What</dt><dd>${step.what}</dd><dt>Why</dt><dd>${step.why}</dd><dt>Input</dt><dd>${step.input.join(', ')}</dd><dt>Output</dt><dd>${step.output}</dd><dt>Impact</dt><dd>${step.impact.join('、')}</dd><dt>Common Mistakes</dt><dd><ul>${step.commonMistakes.map((mistake) => `<li>${mistake}</li>`).join('')}</ul></dd>${icepakContent}${screenshotContent}</dl>`;
 }
 
 function renderNavigation(steps) {
