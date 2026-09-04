@@ -49,6 +49,101 @@ Optimization
 Design Decision
 ```
 
+### 1. Geometry
+**Icepak 操作**：
+1. 创建基础几何：
+   ![几何创建截图](../../media/geometry-setup.png)
+2. 导入外部CAD文件：
+   ![CAD导入截图](../../media/cad-import.png)
+
+### 2. Material
+**Icepak 操作**：
+1. 定义材料属性：
+   ![材料定义截图](../../media/material-properties.png)
+2. 分配材料到几何：
+   ![材料分配截图](../../media/material-assignment.png)
+
+### 3. Power Source
+**Icepak 操作**：
+1. 定义功耗源：
+   ![功耗定义截图](../../media/power-source.png)
+2. 设置功耗类型（恒定/密度/瞬态）：
+   ![功耗类型截图](../../media/power-type.png)
+3. 分配功耗到器件：
+   ![功耗分配截图](../../media/power-assignment.png)
+
+### 4. Boundary Condition
+**Icepak 操作**：
+1. 定义边界条件类型：
+   ![边界条件截图](../../media/boundary-condition.png)
+2. 设置入口/出口参数：
+   ![入口出口截图](../../media/inlet-outlet.png)
+3. 分配边界到几何面：
+   ![边界分配截图](../../media/boundary-assignment.png)
+
+### 5. Flow Management
+**Icepak 操作**：
+1. 定义风扇特性曲线：
+   ![风扇定义截图](../../media/fan-setup.png)
+2. 设置风扇方向和位置：
+   ![风扇方向截图](../../media/fan-direction.png)
+3. 配置格栅和开口：
+   ![格栅开口截图](../../media/grille-opening.png)
+
+### 6. Thermal Management
+**Icepak 操作**：
+1. 定义散热器和热管：
+   ![散热器定义截图](../../media/heat-sink.png)
+2. 设置 TIM 和接触热阻：
+   ![TIM设置截图](../../media/tim-setup.png)
+3. 配置辐射参数：
+   ![辐射设置截图](../../media/radiation-setup.png)
+
+### 7. Mesh
+**Icepak 操作**：
+1. 设置全局网格尺寸：
+   ![全局网格截图](../../media/global-mesh.png)
+2. 定义局部加密区域：
+   ![局部加密截图](../../media/local-refinement.png)
+3. 检查网格质量：
+   ![网格质量截图](../../media/mesh-quality.png)
+
+### 8. Solver
+**Icepak 操作**：
+1. 配置求解器参数：
+   ![求解器设置截图](../../media/solver-setup.png)
+2. 设置收敛标准：
+   ![收敛标准截图](../../media/convergence-criteria.png)
+3. 监控求解过程：
+   ![求解监控截图](../../media/solver-monitoring.png)
+
+### 9. Post Processing
+**Icepak 操作**：
+1. 提取温度结果：
+   ![温度结果截图](../../media/temperature-results.png)
+2. 分析流场和压降：
+   ![流场分析截图](../../media/flow-analysis.png)
+3. 生成报告和图表：
+   ![报告生成截图](../../media/report-generation.png)
+
+### 10. Optimization
+**Icepak 操作**：
+1. 定义优化变量：
+   ![优化变量截图](../../media/optimization-variables.png)
+2. 设置优化目标和约束：
+   ![优化目标截图](../../media/optimization-objective.png)
+3. 运行优化并分析结果：
+   ![优化结果截图](../../media/optimization-results.png)
+
+### 11. Design Decision
+**Icepak 操作**：
+1. 对比设计方案：
+   ![方案对比截图](../../media/design-comparison.png)
+2. 评估可靠性指标：
+   ![可靠性评估截图](../../media/reliability-assessment.png)
+3. 生成设计决策报告：
+   ![决策报告截图](../../media/decision-report.png)
+
 ---
 
 ## 3. Workflow Details
